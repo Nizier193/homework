@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <title>website</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>This is a test page.</h1>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Nizier-page</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="https://youtu.be/K_nRNTWWhAg">Doom</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Links
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://steamcommunity.com/profiles/76561198284525082/">Go-to my steam page.</a></li>
+                <li><a class="dropdown-item" href="https://github.com/Nizier193">Go-to my GitHub.</a></li>
+                <li><a class="dropdown-item" href="https://discord.gg/hyhJnzz5">Go-to my discord channel.</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><div class="dropdown-item"><div class="w-25 p-3"><img src="https://avatars.mds.yandex.net/i?id=6d0ab5c02867529c0667d706dcacc59d3fea5cd0-9152533-images-thumbs&n=13" style="width: 1000%;"></div></div></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
 
     <div class="block" id="div_1">
         <h1>Заголовок 1</h1>
@@ -23,15 +58,53 @@
         </ul>
     </div>
 
+
+
+    <div class="block">
+        <form action="">
+            <label for="text_">Some text</label><br>
+            <input id="text_" type="text"><br>
+            <br>
+
+            <label for="checkbox_">Some checkbox</label><br>
+            <input id="checkbox_" type="checkbox"><br>
+            <br>
+
+            <label for="password_">Some password</label><br>
+            <input id="password_" type="password"><br>
+            <br>
+            
+            <label for="calendar_">Some calendar</label><br>
+            <input id="calendar_" type="date"><br>
+            <br>
+
+            <label for="some_text_area">Напишите что-нибудь о себе.</label><br>
+            <textarea id="some_text_area" cols="50" rows="5">Меня зовут Никита. Мне 16 лет.</textarea><br>
+            <br>
+
+            <button>Some button</button>
+
+        </form>
+    </div>
+
     <div class="block" id="div_2">
-        <p id="custom_p">bro look at this amogus</p>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem distinctio laboriosam quod illum atque iste, ad, fugit ipsam, temporibus eum vero enim. Sed cum fugit quam voluptates, facilis eius officiis?</p>
-        <ul>
-            <li>element 1</li>
-            <li>element 2</li>
-            <li>element 3</li>
-        </ul>
-        <img src="https://avatars.mds.yandex.net/i?id=6d0ab5c02867529c0667d706dcacc59d3fea5cd0-9152533-images-thumbs&n=13">
+        <div class="card" style="width: 18rem;">
+          <img src="https://avatars.mds.yandex.net/i?id=6d0ab5c02867529c0667d706dcacc59d3fea5cd0-9152533-images-thumbs&n=13" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Amogus</h5>
+            <p class="card-text">Just look at his adorable face UwU</p>
+            <a href="https://www.youtube.com/watch?v=obmlZH3X9gs" class="btn btn-primary">Amogus Clip</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/55/2b/90/552b9000-b194-451b-9b37-b472aeafa81e/1963620731190_cover.jpg/800x800bb.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">OneHeart</h5>
+            <p class="card-text">A beautiful music composer that totally won my heart.</p>
+            <a href="https://www.youtube.com/watch?v=hzLdZWIeq3c&list=LL&index=15" class="btn btn-primary">Watch his Tracks.</a>
+          </div>
+        </div>
     </div>
 
 </body>

@@ -10,6 +10,10 @@
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+    width: 100em;
+
+    display: inline-block;
+    float: left;
 }
 
 .text {
@@ -25,4 +29,9 @@
 
 #div_2 li {
     color: aqua;
+}
+
+.card {
+    float: left;
+    margin: 0.5%;
 }
