@@ -1,0 +1,37 @@
+#custom_p {
+    font-style: oblique;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: greenyellow 1px 0 10px;
+}
+
+.block {
+    border: 5px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 100em;
+
+    display: inline-block;
+    float: left;
+}
+
+.text {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    color: gray;
+}
+
+#div_1 li {
+    color: brown;
+}
+
+#div_2 li {
+    color: aqua;
+}
+
+.card {
+    float: left;
+    margin: 0.5%;
+}
