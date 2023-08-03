@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'online_shop_b',
     'app_lesson_4',
+    'social_net',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,10 @@ ROOT_URLCONF = 'online_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [Path.joinpath(BASE_DIR, 'templates')],
+        'DIRS': [
+            Path.joinpath(BASE_DIR, 'templates'),
+            Path.joinpath(BASE_DIR, 'social_net/templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,5 +129,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    Path.joinpath(BASE_DIR, 'static')
+    Path.joinpath(BASE_DIR, 'static'),
+    Path.joinpath(BASE_DIR, 'social_net/static'),
 ]

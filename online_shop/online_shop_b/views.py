@@ -8,7 +8,7 @@ def top_sellers(requests):
     return render(requests, 'top-sellers.html')
 
 def profile(requests):
-    return render(requests, 'profile.html')
+    return render(requests, 'profile-net.html')
 
 def adv_post(requests):
     return render(requests, 'advertisement-post.html')
