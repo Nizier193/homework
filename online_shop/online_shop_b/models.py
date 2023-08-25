@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib import admin
 from django.utils import timezone
 from django.utils.html import format_html
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 class Advertisement(models.Model):
     title = models.CharField(
@@ -28,7 +31,22 @@ class Advertisement(models.Model):
         auto_now=True,
         verbose_name="Дата редактирования"
     )
+    user = models.ForeignKey(
+        User,
+        verbose_name='пользователь',
+        on_delete=models.CASCADE
+    )
+    image = models.ImageField(
+        verbose_name='изображения',
+        upload_to = 'online_shop_b/'
+    )
     # from online_shop_b.models import *
+    @admin.display(description='Изображение')
+    def display_photo(self):
+        if str(self.image) != "1":
+            return format_html('<img src={} style="width:100px;">', self.image.url)
+        else:
+            return format_html('<img src="/static/img/adv.png" style="width:100px;">')
 
     @admin.display(description='Дата создания')
     def display_date(self):
@@ -49,7 +67,7 @@ class Advertisement(models.Model):
         return self.updated_at.strftime('%d.%m.%Y в %H:%M:%S')
 
     def __str__(self):
-        return f'Advertisement(id = {self.id}, title = {self.title}, price = {self.price})'
+        return f'Advertisement(id = {self.id}, title = {self.title}, price = {self.price}, photo = {self.image})'
 
     class Meta:
         db_table = 'advertisements'

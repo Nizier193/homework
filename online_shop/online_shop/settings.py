@@ -133,3 +133,6 @@ STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, 'static'),
     Path.joinpath(BASE_DIR, 'social_net/static'),
 ]
+
+MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')
+MEDIA_URL = 'media/'
