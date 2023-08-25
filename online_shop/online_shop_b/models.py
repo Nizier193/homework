@@ -38,12 +38,14 @@ class Advertisement(models.Model):
     )
     image = models.ImageField(
         verbose_name='изображения',
-        upload_to = 'online_shop_b/'
+        upload_to = 'online_shop_b/',
+        blank=True,
+        null=True,
     )
     # from online_shop_b.models import *
     @admin.display(description='Изображение')
     def display_photo(self):
-        if str(self.image) != "1":
+        if self.image:
             return format_html('<img src={} style="width:100px;">', self.image.url)
         else:
             return format_html('<img src="/static/img/adv.png" style="width:100px;">')
