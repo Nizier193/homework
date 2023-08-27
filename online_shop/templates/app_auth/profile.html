@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block nav-profile %}active{% endblock %}
+
+{% block content %}
+<div class="col" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Сейчас вы находитесь на сайте под ником {{ user }}.</span>
+  </div>
+</div>
+<script src={% static "js/bootstrap.bundle.min.js" %}></script>
+{% endblock %}

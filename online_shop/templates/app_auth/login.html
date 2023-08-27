@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block nav-login %}active{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+  <div class="row">
+    <div class="col-8" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">Страница авторизации пользователя</span>
+      </div>
+    </div>
+  </div>
+    <form method="post">
+      {% csrf_token %}
+      <div class="row mb-3">
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">Username</label>
+          <div class="col-sm-4 offset-4 w-25">
+            <input name="username" type="text" class="form-control form-control-lg">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">Password</label>
+          <div class="col-sm-4 offset-4 w-25">
+            <input name="password" type="password" class="form-control form-control-lg">
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3 offset-sm-5">
+        <div class="col">
+          <button type="submit" class="btn btn-success">Принять</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+{% endblock %}

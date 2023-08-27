@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'online_shop_b',
     'app_lesson_4',
     'social_net',
+    'app_auth',
 ]
 
 MIDDLEWARE = [

@@ -13,6 +13,47 @@
 </head>
 
 <body>
+  <ul class="nav nav-pills sticky-top bg-white nav-fill">
+    <li class="nav-item">
+      <a class="nav-link {% block nav-main %}{% endblock %}" href="{% url 'main-page' %}">
+        <span style="font-weight: bold;">Главная</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% block nav-topsellers %}{% endblock %}" href="{% url 'top-sellers' %}"><span style="font-weight: bold;">Топ продавцов</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% block nav-advpost %}{% endblock %}" aria-current="page" href="{% url 'advertisement-post' %}">
+        <span style="font-weight: bold;">Разместить объявление</span>
+      </a>
+    </li>
+    {% if not authenticated %}
+    <li class="nav-item">
+      <a class="nav-link {% block nav-register %}{% endblock %}" href="{% url 'register' %}">
+        <span style="font-weight: bold;">Регистрация</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% block nav-login %}{% endblock %}" href="{% url 'login' %}">
+        <span style="font-weight: bold;">Войти</span>
+      </a>
+    </li>
+    {% endif %}
+
+    {% if authenticated %}
+    <li class="nav-item">
+      <a class="nav-link {% block nav-profile %}{% endblock %}" href="{% url 'profile' %}">
+        <span style="font-weight: bold;">Профиль</span>
+      </a>
+    </li>
+    {% endif %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'logout' %}">
+        <span style="font-weight: bold;">Выйти</span>
+      </a>
+    </li>
+  </ul>
     {% block content %}{% endblock %}
 </body>
 </html>

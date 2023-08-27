@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block nav-advpost %}active{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">Сообщите миру об этом в этой форме</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="row mb-3 offset-sm-5">
+        <div class="col-6">
+          {{ form.as_p }}
+        </div>
+      </div>
+      <div class="row mb-3 offset-sm-5">
+        <div class="col">
+          <button type="submit" class="btn btn-success">Принять</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+{% endblock %}
